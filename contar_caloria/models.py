@@ -9,12 +9,6 @@ class Calorias (models.Model):
     qt_calorias = models.DecimalField(max_digits=15, decimal_places=5)
 
 class TipoRefeicao(models.Model):
-    # refeicao_choice = (
-    #     ("C", "Café da manhã"),
-    #     ("A", "Almoço"),
-    #     ("T", "Café da tarde"),
-    #     ("J", "Janta")
-    # )
 
     tipo_refeicao= models.CharField(max_length=1, blank=False, null=False)
     nome_refeicao = models.TextField(max_length=16, null=False, blank=False)

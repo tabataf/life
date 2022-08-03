@@ -31,8 +31,21 @@
                         <option value="{{opcao.id}}">{{opcao}}</option>
                         {% endfor %}
                     </select>
+                    <form action="" method="get">
+                        <input name="alimento" class="input_alimento" placeholder="Digite o que você ingiriu"></input>
+                        <button class="botao_buscar" type="submit"> Buscar </button>
+                    </form>
+                    <!-- {% for key, value in consulta_alimento.items %}
+                    <div>{{ key }}</div>
+                    <div>{{ value }}</div>
+                    {% endfor %} -->
+
+                    {% for i in consulta_alimento %}
+                    {{i}}
+                    {% endor %}
                 </div>
             </div>
+
     </main>
 </body>
 
