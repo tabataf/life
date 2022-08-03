@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(245 245 245);
+    width: 99%;
+}
+
+.tipo_alimento{
+    color: rgb(57, 171, 158);
+    display: flex ;
+    justify-content: center;
+    
+}
+
+.calculadora {
+    width: 87px;
+    height: 109px;
+    margin-top: 2px;
+    margin-left: 3vh;
+}
+
+.logo {
+    width: 45vh;
+    height: 25vh;
+    display:flex ;
+    align-content: center;
+}
+
+.escolher_refeicao {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: rgb(54 69 97);;
+}
+
+.refeicao {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(68, 68, 75);
+    width: 22vh;
+    border-radius: 1px;
+    margin-bottom: 0.5rem;
+    padding-left: 0.1vh;
+}
+
+.container_refeicao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2vh;
+    margin-top: 0.7vh;
+}
+.container_escolha_refeicao {
+    display: flex;
+    margin-top: 1vh;
+}

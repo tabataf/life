@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'contar_caloria/css/pg_inicial.css' %}">
+    <title> Healthy life 🍴 </title>
+    <meta name="description"
+        content="Descubra é um site onde você pode controlar a quantidade de calorias que você ingeriu, e por meio disso ter uma dieta mais regrada! ">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="{% static 'contar_caloria/image/logo.png' %}" alt="">
+        <h2 class="tipo_alimento"> Escolha as classes do seu alimento </h2>
+    </header>
+
+    <main>
+        <div class="main_text">
+            <p class="escolher_refeicao">
+                - Escolha a sua refeição: </p>
+            <div class="container_escolha_refeicao">
+                <img class="calculadora" src="{% static 'contar_caloria/image/calculadora.png' %}" alt="">
+                <div class="container_refeicao">
+                    <select name="cars" id="cars">
+                        {% for opcao in refeicao %}
+                        <option value="{{opcao.id}}">{{opcao}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+    </main>
+</body>
+
+</html>
