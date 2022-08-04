@@ -10,21 +10,19 @@ def pagina_inicial(request):
     alimento_digitado= request.GET.get('alimento')
     refeicao = TipoRefeicao.objects.all()
     alimento_digitado= alimento_digitado
-    consulta_alimento= requests.get(f'https://caloriasporalimentoapi.herokuapp.com/api/calorias/?descricao={alimento_digitado}')
-    # consulta_alimento= json.load(consulta_alimento.json)
+    resultado= requests.get(f'https://caloriasporalimentoapi.herokuapp.com/api/calorias/?descricao={alimento_digitado}')
+    consulta_alimento= json.loads(resultado.content)
+    alimentos_filtrado = []
+    for alimento in consulta_alimento:
+        alimentos_filtrado.append({
+            'caloria': alimento['calorias'],
+            'descricao': alimento['descricao'],
+            'quantidade': alimento['quantidade'],
+        })
     context ={
-        'consulta_alimento' : consulta_alimento,
+        'consulta_alimento' : alimentos_filtrado,
         'refeicao': refeicao,
     }
 
+
     return render (request, "contar_caloria/pg_inicial.html",context)
-
-def alimento(request):
-    return JsonResponse(context)
-
-# def listar_alimento(request, id):
-#     refeicao = TipoRefeicao.objects.all()
-#     context ={
-#         'refeicao' : refeicao
-#     }
-#     return render(request, 'contar_caloria/pg_inicial.html', context)

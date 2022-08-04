@@ -35,17 +35,17 @@
                         <input name="alimento" class="input_alimento" placeholder="Digite o que você ingiriu"></input>
                         <button class="botao_buscar" type="submit"> Buscar </button>
                     </form>
-                    <!-- {% for key, value in consulta_alimento.items %}
-                    <div>{{ key }}</div>
-                    <div>{{ value }}</div>
-                    {% endfor %} -->
-
                     {% for i in consulta_alimento %}
+                    {{alimento_digitado.calorias}}
                     {{i}}
                     {% endfor %}
+                    <div>
+                        <p>Adicione aqui o seu novo alimento</p>
+                    </div>
                     <div class="botoes">
                         <button class="botao_salvar"> Salvar </button>
-                        <button class="botao_adicionar_mais"> Adicionar mais um alimento</button>
+                        <input type="button" value="Adicionar mais um alimento" onClick="history.go(-1)"
+                            class="botao_adicionar_mais"></input>
                     </div>
                 </div>
             </div>
