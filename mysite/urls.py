@@ -21,5 +21,4 @@ from contar_caloria import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.pagina_inicial),
-    path('frango/', views.alimento),
 ]

@@ -31,8 +31,25 @@
                         <option value="{{opcao.id}}">{{opcao}}</option>
                         {% endfor %}
                     </select>
+                    <form action="" method="get">
+                        <input name="alimento" class="input_alimento" placeholder="Digite o que você ingiriu"></input>
+                        <button class="botao_buscar" type="submit"> Buscar </button>
+                    </form>
+                    {% for i in consulta_alimento %}
+                    {{alimento_digitado.calorias}}
+                    {{i}}
+                    {% endfor %}
+                    <div>
+                        <p>Adicione aqui o seu novo alimento</p>
+                    </div>
+                    <div class="botoes">
+                        <button class="botao_salvar"> Salvar </button>
+                        <input type="button" value="Adicionar mais um alimento" onClick="history.go(-1)"
+                            class="botao_adicionar_mais"></input>
+                    </div>
                 </div>
             </div>
+
     </main>
 </body>
 
