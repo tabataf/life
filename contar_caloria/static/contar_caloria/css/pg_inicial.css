@@ -76,3 +76,33 @@ body{
     border-radius: 5px;
     width: 63px;
 }
+
+.botao_salvar{
+    color: rgb(250, 250, 250);
+    background-color: rgb(27, 165, 142);
+    border-color: rgb(145, 143, 145);
+    padding: 0.2rem;
+    border-radius: 5px;
+    margin-right: 1vh;
+}
+
+.botao_salvar:active{
+    background-color: rgb(35, 98, 84);
+}
+
+.botao_adicionar_mais {
+    color: rgb(250, 250, 250);
+    background-color: rgb(27, 165, 142);
+    border-color: rgb(145, 143, 145);
+    padding: 0.2rem;
+    border-radius: 5px;
+}
+
+.botao_adicionar_mais:active{
+    background-color: rgb(35, 98, 84);
+}
+
+.botoes{
+    display: flex;
+    margin-top: 1vh;
+}

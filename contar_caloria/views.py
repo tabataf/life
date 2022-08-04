@@ -1,3 +1,4 @@
+from asyncore import read
 from django.shortcuts import render
 from django.http import JsonResponse
 import requests, json
@@ -10,7 +11,7 @@ def pagina_inicial(request):
     refeicao = TipoRefeicao.objects.all()
     alimento_digitado= alimento_digitado
     consulta_alimento= requests.get(f'https://caloriasporalimentoapi.herokuapp.com/api/calorias/?descricao={alimento_digitado}')
-    consulta_alimento= json.load(consulta_alimento.json())
+    # consulta_alimento= json.load(consulta_alimento.json)
     context ={
         'consulta_alimento' : consulta_alimento,
         'refeicao': refeicao,
